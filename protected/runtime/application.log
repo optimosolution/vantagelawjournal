@@ -1,0 +1,26 @@
+2015/05/30 23:44:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/d18c94a8/jui/js/jquery.ui.datepicker-en.js".' in D:\xampp\htdocs\framework\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/d18c94a8...')
+#1 D:\xampp\htdocs\framework\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\vantagelawjournal\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\xampp\htdocs\framework\yii\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\xampp\htdocs\vantagelawjournal\index.php(14): CComponent->__call('runEnd', Array)
+#6 D:\xampp\htdocs\vantagelawjournal\index.php(14): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/vantagelawjournal/assets/d18c94a8/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://localhost/vantagelawjournal/backend.php/content/admin.html
+---
+2015/05/30 23:44:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/d18c94a8/jui/js/jquery.ui.datepicker-en.js".' in D:\xampp\htdocs\framework\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/d18c94a8...')
+#1 D:\xampp\htdocs\framework\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\vantagelawjournal\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\xampp\htdocs\framework\yii\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\xampp\htdocs\vantagelawjournal\index.php(14): CComponent->__call('runEnd', Array)
+#6 D:\xampp\htdocs\vantagelawjournal\index.php(14): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/vantagelawjournal/assets/d18c94a8/jui/js/jquery.ui.datepicker-en.js
+HTTP_REFERER=http://localhost/vantagelawjournal/backend.php/content/admin.html
+---
