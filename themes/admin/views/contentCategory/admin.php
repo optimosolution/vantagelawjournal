@@ -65,6 +65,7 @@ $('.search-form form').submit(function(){
                         'value' => '$data->description',
                         'htmlOptions' => array('style' => "text-align:left;", 'title' => 'Description'),
                     ),
+                	'ordering',
                     array(
                         'name' => 'published',
                         'header' => "Status",

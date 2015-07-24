@@ -10,7 +10,9 @@ $this->pageTitle = $model->title . ' - ' . Yii::app()->name;
             <?php echo UserAdmin::get_day($model->created); ?> <small><?php echo UserAdmin::get_month_year($model->created); ?></small>
         </span>
         <span class="info hidden-xs">
-            <span class="block"><i class="fa fa-folder-open-o"></i> POSTED IN <?php echo CHtml::link(ContentCategory::getCategoryName($model->catid), array('news/index', 'id' => $model->catid), array('class' => '')); ?></span>
+        	<span class="block"><i class="fa fa-user"></i> Written By - <?php echo UserAdmin::get_name($model->created_by); ?></span>
+        	<span class="block"><i class="fa fa-book"></i> <?php echo ContentCategory::getVolumeNo($model->catid); ?></span>
+            <span class="block"><i class="fa fa-file"></i> <?php echo ContentCategory::getCategoryName($model->catid); ?></span>
             <span class="block"><i class="fa fa-comments"></i> WITH <?php echo CHtml::link(ResourceComment::count_comments($model->id) . ' COMMENTS', array('news/view', 'id' => $model->id), array()); ?></span>
         </span>
     </div>
@@ -25,12 +27,16 @@ $this->pageTitle = $model->title . ' - ' . Yii::app()->name;
             ));
             ?>
         </p>        
-        <?php echo Content::get_picture_responsive($model->id); ?>
+        <?php 
+	        if(!empty($model->images)){
+	        	echo Content::get_picture_responsive($model->id); 
+	        }        
+        ?>
         <!-- blog short preview -->
         <p class="dropcap"><?php echo $model->introtext; ?></p>
         <!-- read more button -->
         <div class="text-right">
-            <?php //echo CHtml::link('<i class="fa fa-sign-out"></i> MAIN SOURCE', $model->main_source, array('class' => 'read-more btn btn-xs', 'target' => '_blank')); ?>
+            
         </div>
         <hr class="half-margins invisible" />
         <!-- COMMENTS -->

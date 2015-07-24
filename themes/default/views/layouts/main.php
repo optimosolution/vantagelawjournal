@@ -82,7 +82,7 @@
                             <nav class="nav-main">
                                 <ul id="topMain" class="nav nav-pills nav-main">
                                     <?php echo '<li class="mega-menu active">' . CHtml::link('HOME', array('/site/index'), array('class' => '', 'style' => '')) . '</li>'; ?>                                    
-                                    <?php echo '<li class="mega-menu">' . CHtml::link('PUBLICATIONS', array('/publication/index', 'id' => 2), array('class' => '')) . '</li>'; ?>                                                                       
+                                    <?php echo '<li class="mega-menu">' . CHtml::link('PUBLICATIONS', array('/publication/index'), array('class' => '')) . '</li>'; ?>                                                                       
                                     <li class="dropdown">
                                         <a class="dropdown-toggle" href="#">ABOUT US</a>
                                         <ul class="dropdown-menu">
@@ -91,7 +91,7 @@
                                         </ul>
                                     </li>
                                     <?php echo '<li class="mega-menu">' . CHtml::link('SUBMISSION', array('/content/view', 'id' => 6), array('class' => '')) . '</li>'; ?>                                                                       
-                                    <?php echo '<li class="mega-menu">' . CHtml::link('CONTACT US', array('/site/contact'), array('class' => '')) . '</li>'; ?>                                    
+                                    <?php echo '<li class="mega-menu">' . CHtml::link('CONTACT US', array('/content/view', 'id' => 7), array('class' => '')) . '</li>'; ?>                                    
                                 </ul>
                             </nav>
                         </div>
@@ -127,7 +127,7 @@
                                 <li><?php echo CHtml::link('<i class="fa fa-sign-out"></i> VIDEO', array('youtube/index'), array()); ?></li>                                
                                 <li><?php echo CHtml::link('<i class="fa fa-sign-out"></i> WEBLINKS', array('/weblink/index'), array()); ?></li>                                
                                 <li><?php echo CHtml::link('<i class="fa fa-sign-out"></i> GALLERY', array('/gallery/index', 'id' => 3), array()); ?></li>                                                                
-                                <li><?php echo CHtml::link('<i class="fa fa-envelope"></i> CONTACT US', array('/site/contact'), array()); ?></li>
+                                <li><?php echo CHtml::link('<i class="fa fa-envelope"></i> CONTACT US', array('/content/view', 'id' => 7), array()); ?></li>
                             </ul>
                         </div>
                         <!-- /col #2 -->

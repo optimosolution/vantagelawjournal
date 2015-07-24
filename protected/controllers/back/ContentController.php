@@ -118,8 +118,8 @@ class ContentController extends BackEndController {
             //$images->attributes = $_POST['ContentImage'];
             $images = CUploadedFile::getInstancesByName('image');
             if ($model->validate()) {
-                $model->created = new CDbExpression('NOW()');
-                $model->created_by = Yii::app()->user->id;
+                //$model->created = new CDbExpression('NOW()');
+                //$model->created_by = Yii::app()->user->id;
                 if (empty($model->alias)) {
                     $model->alias = str_replace(' ', '-', strtolower($model->title));
                 } else {

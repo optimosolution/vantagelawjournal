@@ -4,7 +4,7 @@
     <div class="container">
         <header>
             <h2><!-- Page Title -->
-                <?php echo ContentCategory::getCategoryName($_GET['id']); ?>
+                Publications
             </h2><!-- /Page Title -->
         </header>
     </div>			

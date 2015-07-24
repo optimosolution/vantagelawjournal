@@ -41,6 +41,7 @@ $this->breadcrumbs = array(
                         'value' => $model->description,
                         'htmlOptions' => array('style' => "text-align:left;"),
                     ),
+                	'ordering',
                     array(
                         'name' => 'published',
                         'value' => $model->published ? "Yes" : "No",

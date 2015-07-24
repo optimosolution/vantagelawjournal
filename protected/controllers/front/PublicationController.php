@@ -124,11 +124,11 @@ class PublicationController extends Controller {
     /**
      * Lists all models.
      */
-    public function actionIndex($id) {
+    public function actionIndex() {
         $this->layout = '//layouts/content_category';
         $criteria = new CDbCriteria;
         $criteria->addCondition('state=1');
-        $criteria->addCondition('catid=' . (int) $id);
+        $criteria->addCondition('catid != 1');
         $dataProvider = new CActiveDataProvider('Content', array(
             'criteria' => $criteria,
             'pagination' => array(

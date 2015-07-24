@@ -85,7 +85,7 @@ class Content extends CActiveRecord {
             'fulltext' => 'Fulltext',
             'state' => 'Published',
             'catid' => 'Category',
-            'created' => 'Created',
+            'created' => 'Created On',
             'created_by' => 'Created By',
             'modified' => 'Modified',
             'modified_by' => 'Modified By',
@@ -306,7 +306,7 @@ class Content extends CActiveRecord {
                 array(
                     'select' => 'id,title,catid,introtext,created',
                     'condition' => 'state=1 AND editorial_choice=1',
-                    'order' => 'ordering DESC, created DESC',
+                    'order' => 'created DESC, id DESC',
                     'limit' => '6',
         ));
         $i = 1;
@@ -315,10 +315,11 @@ class Content extends CActiveRecord {
             if ($i == 1) {
                 echo '<div class="col-md-6">';
                 echo Content::get_picture_responsive($value['id']);
+                echo '<br /><span style="font-size:11px;">' . ContentCategory::getVolumeNo($value['catid']) .', '. ContentCategory::getCategoryName($value['catid']).', '.UserAdmin::get_date($value['created']) . '</span>';
                 echo '<h4>' . CHtml::link($value['title'], array('news/view', 'id' => $value['id']), array()) . '</h4>';
                 echo '</div>';
             } else {
-                echo '<div>' . CHtml::link('<i class="fa fa-sign-out"></i> ' . $value['title'], array('news/view', 'id' => $value['id']), array('style' => 'font-size:16px;')) . '<br /><span style="font-size:11px;">' . UserAdmin::get_date_time($value['created']) . '</span></div>';
+                echo '<div>' . CHtml::link('<i class="fa fa-sign-out"></i> ' . $value['title'], array('news/view', 'id' => $value['id']), array('style' => 'font-size:16px;')) . '<br /><span style="font-size:11px;">' . ContentCategory::getVolumeNo($value['catid']) .', '. ContentCategory::getCategoryName($value['catid']).', '.UserAdmin::get_date($value['created']) . '</span></div>';
             }
             $i++;
         }
